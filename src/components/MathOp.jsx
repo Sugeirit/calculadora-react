@@ -14,8 +14,9 @@ const renderOp=(onClickOperation)=>{
     return op.map(render)
 }
 
-const MathOp = ({onClickOperation,onClickEqual})=>(
+const MathOp = ({onDelete,onClickOperation,onClickEqual})=>(
     <section className="math-operations">
+        <Button text="&larr;" clickHandler={onDelete}/>
         {
             renderOp(onClickOperation)
         }
@@ -25,7 +26,9 @@ const MathOp = ({onClickOperation,onClickEqual})=>(
 
 MathOp.propTypes = {
     onClickOperation: PropTypes.func.isRequired,
-    onClickEqual: PropTypes.func.isRequired
+    onClickEqual: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired
+
 }
 
 

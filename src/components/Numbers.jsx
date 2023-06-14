@@ -25,7 +25,7 @@ const Numbers = ({onClickNumber})=>{
 }
 
 Numbers.propTypes = {
-    onClickOperation: PropTypes.func.isRequired
+    onClickNumber: PropTypes.func.isRequired
 }
 
 
